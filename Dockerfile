@@ -1,7 +1,7 @@
 
-FROM python
-MKDIR /code
-MKDIR /templates
-COPY replace_environ.py /code
+FROM python:2.7
+RUN mkdir /code
+RUN mkdir /templates
+COPY replace_environ.py /code/
 
-CMD ["/usr/bin/python","/code/replace_environ.py"]  
+CMD ["python2.7","/code/replace_environ.py"]  
